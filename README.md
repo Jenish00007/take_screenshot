@@ -42,8 +42,8 @@ start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+TODO: BoxSlideImage is a Flutter package that provides a customizable image carousel slider
+to `/box_slide_images` folder.
 
 ```dart
  child: BoxingImages(),
