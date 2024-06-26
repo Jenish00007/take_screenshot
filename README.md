@@ -11,12 +11,29 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+TODO: BoxSlideImage is a Flutter package that provides a customizable image carousel slider. It is designed to be simple to use and highly flexible, making it a great addition to any Flutter project that requires an image carousel.
+# BoxSlideImage
+
+BoxSlideImage is a Flutter package that provides a customizable image carousel slider. It is designed to be simple to use and highly flexible, making it a great addition to any Flutter project that requires an image carousel.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Easy to use image carousel.
+- Supports autoplay and manual slide control.
+- Fully customizable carousel options.
+- Works with network images.
+
+## Getting started
+
+To start using the BoxSlideImage package, add it to your project's `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  boxslideimage: ^1.0.0
+
+## Features
+
+TODO: BoxSlideImage is a Flutter package that provides a customizable image carousel slider. It is designed to be simple to use and highly flexible, making it a great addition to any Flutter project that requires an image carousel.
 
 ## Getting started
 
@@ -29,11 +46,9 @@ TODO: Include short and useful examples for package users. Add longer examples
 to `/example` folder.
 
 ```dart
-const like = 'sample';
+ child: BoxingImages(),
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+TODO: For more information about the BoxSlideImage package, please visit https://github.com/Jenish00007/take_screenshot.git
