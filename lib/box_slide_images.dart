@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:fancy_containers/fancy_containers.dart';
 
 class BoxingImages extends StatefulWidget {
   const BoxingImages({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class BoxingImages extends StatefulWidget {
 }
 
 class _BoxingImagesState extends State<BoxingImages> {
-  List<String> imgUrls = [
+  final List<String> imgUrls = [
     "https://images.unsplash.com/photo-1552072092-7f9b8d63efcb",
     "https://images.unsplash.com/flagged/photo-1574008526523-3f48a9f170f0",
     "https://images.unsplash.com/photo-1591110274329-78b8d68c63b0",
@@ -23,16 +24,52 @@ class _BoxingImagesState extends State<BoxingImages> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: CarouselSlider.builder(
-        itemCount: imgUrls.length,
-        itemBuilder: (context, index, pageViewIndex) {
-          return Container(
-            child: Image.network(imgUrls.elementAt(index)),
-          );
-        },
-        options: CarouselOptions(autoPlay: true),
+    return CarouselSlider.builder(
+      itemCount: imgUrls.length,
+      itemBuilder: (context, index, pageViewIndex) {
+        return Container(
+          margin: EdgeInsets.symmetric(horizontal: 5.0),
+          child: Image.network(imgUrls[index], fit: BoxFit.cover),
+        );
+      },
+      options: CarouselOptions(autoPlay: true),
+    );
+  }
+}
+
+class FancyScreen extends StatelessWidget {
+  const FancyScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Fancy Screen'),
+      ),
+      body: Center(
+        child: FancyContainer(
+          title: 'Hello World',
+          color1: Colors.lightGreenAccent,
+          color2: Colors.lightBlue,
+          subtitle: 'This is a new package',
+        ),
       ),
     );
   }
+}
+
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text('Image Carousel and Fancy Container'),
+      ),
+      body: Column(
+        children: [
+          Expanded(child: BoxingImages()),
+          Expanded(child: FancyScreen()),
+        ],
+      ),
+    ),
+  ));
 }

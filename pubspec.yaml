@@ -1,6 +1,6 @@
 name: box_slide_images
 description: "A new Flutter box_slide_images project."
-version: 0.0.1
+version: 0.0.3
 homepage: https://github.com/Jenish00007/take_screenshot.git
 
 environment:
@@ -12,11 +12,13 @@ dependencies:
     sdk: flutter
     
   carousel_slider: ^4.1.1
+  fancy_containers: ^0.0.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -40,6 +42,7 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  
   # fonts:
   #   - family: Schyler
   #     fonts:
