@@ -37,39 +37,46 @@ class _BoxingImagesState extends State<BoxingImages> {
   }
 }
 
-class FancyScreen extends StatelessWidget {
-  const FancyScreen({Key? key}) : super(key: key);
+void main() {
+  runApp(MyApp());
+}
 
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Fancy Screen'),
-      ),
-      body: Center(
-        child: FancyContainer(
-          title: 'Hello World',
-          color1: Colors.lightGreenAccent,
-          color2: Colors.lightBlue,
-          subtitle: 'This is a new package',
-        ),
-      ),
+    return MaterialApp(
+      home: MainScreen(),
     );
   }
 }
 
-void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
+class MainScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title: Text('Image Carousel and Fancy Container'),
       ),
       body: Column(
         children: [
           Expanded(child: BoxingImages()),
-          Expanded(child: FancyScreen()),
+          Expanded(child: FancyScreenContent()),
         ],
       ),
-    ),
-  ));
+    );
+  }
+}
+
+class FancyScreenContent extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: FancyContainer(
+        title: 'Hello World',
+        color1: Colors.lightGreenAccent,
+        color2: Colors.lightBlue,
+        subtitle: 'This is a new package',
+      ),
+    );
+  }
 }
